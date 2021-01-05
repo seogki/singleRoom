@@ -5,6 +5,7 @@
 <script>
 export default {
   name: "login-component",
+  components: {},
 };
 </script>
 
