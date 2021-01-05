@@ -1,7 +1,11 @@
-<template> </template>
+<template>
+  <div id="login-component"></div>
+</template>
 
 <script>
-export default {};
+export default {
+  name: "login-component",
+};
 </script>
 
 <style></style>
