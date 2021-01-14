@@ -9,18 +9,19 @@ import graphql.kickstart.tools.GraphQLQueryResolver;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
-import lombok.RequiredArgsConstructor;
-
 @Component
-@RequiredArgsConstructor
 public class LoginResolver implements GraphQLQueryResolver {
 
     @Autowired
     private LoginRepository loginRepository;
 
-    public List<Login> user() {
-        System.out.println("res");
+    public List<Login> findAllUser() {
+        System.out.println(loginRepository.findAll());
         return loginRepository.findAll();
+    }
+
+    public long getTotalUserCnt() {
+        return loginRepository.count();
     }
 
     public String hello() {

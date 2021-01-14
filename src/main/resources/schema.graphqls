@@ -1,11 +1,19 @@
+# Schema 확장자 : 모든 GraphQL Schema 의 확장자는 *.graphqls 로 설정되어야 합니다.
+# Query : 읽기 연산을 정의함
+# Mutation : 쓰기 연산을 정의함
+# type : 응답값을 정의함
+# input : 파라미터값을 정의함
+# type, input 의 혼용은 불가능 함 : 2개의 값이 정확히 동일해도 각각 정의 내려야 함.
+# 타입명 뒤에 ! : null 값을 허용하지 않겠다는 의미임
+
+type Query {
+  hello: String
+  findAllUser: [Login]
+  getTotalUserCnt: Int
+}
 type Login {
   id: ID
   name: String
-}
-
-type Query {
-  hello: String!
-  user: [Login]
 }
 
 # type Mutation {

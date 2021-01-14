@@ -25,8 +25,8 @@ dependencies {
 	// GraphQL
 	implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:8.1.0'
     // to embed GraphiQL tool
-    runtimeOnly 'com.graphql-java-kickstart:graphiql-spring-boot-starter:8.1.0'
-	compile 'com.graphql-java-kickstart:graphql-java-tools:11.0.0'
+    implementation 'com.graphql-java-kickstart:graphiql-spring-boot-starter:8.1.0'
+	// implementation 'com.graphql-java-kickstart:graphql-java-tools:11.0.0'
 
 	//DB
 	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
