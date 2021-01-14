@@ -3,17 +3,11 @@ module.exports = {
   "indexPath": "../static/index.html",
   "devServer": {
     "proxy": {
-      "/api": {
+      "/graphql": {
         "target": "http://localhost:8900",
         "ws": true,
         "changeOrigin": true
       }
-    }
-  },
-  "pluginOptions": {
-    "apollo": {
-      "enableMocks": true,
-      "enableEngine": true
     }
   },
   "transpileDependencies": [
