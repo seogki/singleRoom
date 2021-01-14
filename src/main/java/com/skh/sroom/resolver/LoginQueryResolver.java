@@ -10,13 +10,12 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
 
 @Component
-public class LoginResolver implements GraphQLQueryResolver {
+public class LoginQueryResolver implements GraphQLQueryResolver {
 
     @Autowired
     private LoginRepository loginRepository;
 
     public List<Login> findAllUser() {
-        System.out.println(loginRepository.findAll());
         return loginRepository.findAll();
     }
 

@@ -11,11 +11,15 @@ type Query {
   findAllUser: [Login]
   getTotalUserCnt: Int
 }
+type Mutation {
+  saveUserInfo(input: saveUserInfo!): Boolean!
+}
+
+input saveUserInfo {
+  name: String!
+}
+
 type Login {
   id: ID
   name: String
 }
-
-# type Mutation {
-#   writeUser(name: String!): Login!
-# }
