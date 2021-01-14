@@ -1,3 +1,13 @@
 type Login {
-  name: String!
+  id: ID
+  name: String
 }
+
+type Query {
+  hello: String!
+  user: [Login]
+}
+
+# type Mutation {
+#   writeUser(name: String!): Login!
+# }

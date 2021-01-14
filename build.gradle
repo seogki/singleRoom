@@ -16,21 +16,31 @@ configurations {
 }
 
 repositories {
+	jcenter()
 	mavenCentral()
 }
-
+ 
 dependencies {
 
 	// GraphQL
-	compile 'com.graphql-java-kickstart:graphql-spring-boot-starter:5.0.5'
-	compile 'com.graphql-java-kickstart:graphiql-spring-boot-starter:5.0.5'
-	compile 'com.graphql-java-kickstart:graphql-java-tools:5.3.4'
+	implementation 'com.graphql-java-kickstart:graphql-spring-boot-starter:8.1.0'
+    // to embed GraphiQL tool
+    runtimeOnly 'com.graphql-java-kickstart:graphiql-spring-boot-starter:8.1.0'
+	compile 'com.graphql-java-kickstart:graphql-java-tools:11.0.0'
+
+	//DB
+	implementation 'org.springframework.boot:spring-boot-starter-data-jpa'
+	runtimeOnly 'org.mariadb.jdbc:mariadb-java-client' // MariaDB
+
 
 	implementation 'org.springframework.boot:spring-boot-starter-web'
 	compileOnly 'org.projectlombok:lombok'
 	developmentOnly 'org.springframework.boot:spring-boot-devtools'
 	annotationProcessor 'org.projectlombok:lombok'
 	providedRuntime 'org.springframework.boot:spring-boot-starter-tomcat'
+
+	// testing facilities
+    testImplementation 'com.graphql-java-kickstart:graphql-spring-boot-starter-test:8.1.0'
 	testImplementation 'org.springframework.boot:spring-boot-starter-test'
 }
 
