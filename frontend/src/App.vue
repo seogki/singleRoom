@@ -1,17 +1,16 @@
 <template>
-  <v-app>
-    <v-app-bar app color="green"> </v-app-bar>
-    <v-main>
-      <v-container fluid>
-        <router-view />
-      </v-container>
-    </v-main>
-    <v-footer app> </v-footer>
-  </v-app>
+  <div id="app" class="full-size flex-vertical">
+    <myHeader></myHeader>
+    <router-view />
+    <myFooter></myFooter>
+  </div>
 </template>
 
 <script>
+import myFooter from "./components/base/Footer.vue";
+import myHeader from "./components/base/Header.vue";
 export default {
+  components: { myFooter, myHeader },
   name: "App",
 
   data: () => ({
@@ -19,3 +18,4 @@ export default {
   }),
 };
 </script>
+<style lang="scss" scoped></style>

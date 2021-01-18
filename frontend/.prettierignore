@@ -1,0 +1,3 @@
+common.scss
+/external/**/**
+/node_modules/**/** 

@@ -6,8 +6,8 @@ Vue.use(VueRouter);
 const routes = [
   {
     path: "/",
-    name: "Base",
-    component: () => import(/* webpackChunkName: "Base" */ "@/components/base/Base"),
+    name: "Main",
+    component: () => import(/* webpackChunkName: "Default" */ "@/components/base/Default"),
   },
 ];
 
